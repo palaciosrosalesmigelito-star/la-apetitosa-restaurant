@@ -1,197 +1,409 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="es">
-
 <head>
-
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Sistema Web de Matrícula - IESTP Recuay</title>
-
-    <link rel="stylesheet" href="css/style.css">
-
-    <link rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
-    <link rel="icon" type="image/png" href="../assets/img/favicon.png">
-
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="La Apetitosa — Comidas Gourmet Fast Food en Recuay, Instituto Superior Tecnológico Público Recuay. Menú moderno, reservas online, diseño responsive e inclusivo." />
+  <title>La Apetitosa — Comidas Gourmet Fast Food | Recuay</title>
+  <!-- Favicon / Logo en la pestaña y en el link de búsqueda -->
+  <link rel="icon" href="assets/favicon.ico" sizes="any" />
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png" />
+  <link rel="icon" type="image/png" sizes="64x64" href="assets/favicon.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/logo.jpg" />
+  <meta name="theme-color" content="#b91c1c" />
+  <!-- Vista previa al compartir el link (WhatsApp / Facebook / Google) -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="La Apetitosa — Comidas Gourmet Fast Food | Recuay" />
+  <meta property="og:description" content="Pollo crocante, papas con queso y salsas gourmet en Recuay. Pide en soles S/." />
+  <meta property="og:image" content="assets/logo.jpg" />
+  <meta property="og:image:alt" content="Logo La Apetitosa Fast Food" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:image" content="assets/logo.jpg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css" />
 </head>
-
 <body>
+  <a class="skip-link" href="#contenido">Saltar al contenido principal</a>
 
-<!--==================== HEADER ====================-->
-
-<header class="header">
-
-    <div class="logo">
-
-        <img src="assets/img/logo.png" alt="Logo">
-
-        <h2>IESTP Recuay</h2>
-
+  <!-- Barra de accesibilidad -->
+  <div class="a11y-bar" role="region" aria-label="Barra de accesibilidad">
+    <div class="container a11y-bar__inner">
+      <span class="a11y-bar__label">Accesibilidad:</span>
+      <button type="button" id="btn-font-minus" class="a11y-btn" aria-label="Reducir tamaño de texto">A−</button>
+      <button type="button" id="btn-font-plus" class="a11y-btn" aria-label="Aumentar tamaño de texto">A+</button>
+      <button type="button" id="btn-contrast" class="a11y-btn" aria-pressed="false">Alto contraste</button>
+      <button type="button" id="btn-motion" class="a11y-btn" aria-pressed="false">Reducir movimiento</button>
     </div>
+  </div>
 
-    <nav class="menu">
+  <!-- Header -->
+  <header class="site-header" id="site-header">
+    <div class="container header-inner">
+      <a href="#inicio" class="brand" aria-label="La Apetitosa — ir al inicio">
+        <img class="brand__logo-img" src="assets/logo.jpg" alt="Logo La Apetitosa Fast Food" width="180" height="120" />
+        <span class="brand__text">
+          <strong>LA APETITOSA</strong>
+          <small>Comidas Gourmet · Fast Food</small>
+        </span>
+      </a>
 
-    <ul>
+      <button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="main-nav" aria-label="Abrir menú de navegación">
+        <span class="nav-toggle__bar"></span>
+        <span class="nav-toggle__bar"></span>
+        <span class="nav-toggle__bar"></span>
+      </button>
 
-        <li>
-            <a href="login.html" class="btn-login">
-                <i class="fa-solid fa-right-to-bracket"></i>
-                Iniciar Sesión
-            </a>
-        </li>
-
-    </ul>
-
-</nav>
-
-</header>
-
-<!--==================== BANNER ====================-->
-
-<section class="banner" id="inicio">
-
-    <div class="banner-texto">
-
-        <h1>Sistema Web de Matrícula</h1>
-
-        <h2>Instituto de Educación Superior Tecnológico Público Recuay</h2>
-
-        <p>
-
-            Sistema diseñado para administrar el proceso de matrícula,
-            cursos, pagos y reportes de manera rápida, segura y eficiente.
-
-        </p>
-
-        <a href="login.html" class="btn-principal">
-
-            Ingresar al Sistema
-
-        </a>
-
+      <nav class="main-nav" id="main-nav" aria-label="Navegación principal">
+        <ul>
+          <li><a href="#inicio" class="nav-link active">Inicio</a></li>
+          <li><a href="#nosotros" class="nav-link">Nosotros</a></li>
+          <li><a href="#menu" class="nav-link">Menú</a></li>
+          <li><a href="#galeria" class="nav-link">Galería</a></li>
+          <li><a href="#testimonios" class="nav-link">Testimonios</a></li>
+          <li><a href="#contacto" class="nav-link">Contacto</a></li>
+        </ul>
+        <a href="#reserva" class="btn btn--primary nav-cta">Reservar mesa</a>
+      </nav>
     </div>
+  </header>
 
-</section>
+  <main id="contenido">
+    <!-- HERO -->
+    <section class="hero" id="inicio" aria-labelledby="hero-title">
+      <div class="container hero-grid">
+        <div class="hero__content">
+          <p class="eyebrow">✦ Comidas Gourmet · Fast Food · Recuay</p>
+          <h1 id="hero-title">La Apetitosa<br>comidas gourmet<br>que conquistan</h1>
+          <p class="lead">
+            En <strong>La Apetitosa</strong> preparamos pollo crocante, papas con queso,
+            alitas gourmet y salsas de la casa. Rápido, sabroso y para todas y todos.
+          </p>
+          <p class="hero__address">📍 Instituto Superior Tecnológico Público Recuay — Recuay, Áncash</p>
+          <div class="hero__actions">
+            <a href="#reserva" class="btn btn--primary btn--lg">Reservar ahora</a>
+            <a href="#menu" class="btn btn--outline btn--lg">Ver menú</a>
+          </div>
+          <ul class="hero__stats" aria-label="Datos del restaurante">
+            <li><strong>+12k</strong><span>Comensales / año</span></li>
+            <li><strong>4.9★</strong><span>Valoración media</span></li>
+            <li><strong>100%</strong><span>Accesible · WCAG AA</span></li>
+          </ul>
+        </div>
+        <figure class="hero__media">
+          <img src="assets/banner.jpg" alt="Banner horizontal de La Apetitosa: pollo crocante, papas fritas con queso y salsas gourmet sobre pizarra" loading="eager" fetchpriority="high" width="1440" height="810" referrerpolicy="no-referrer" />
+          <figcaption class="hero__badge" aria-label="Combo gourmet de La Apetitosa">
+            <strong>Combo gourmet</strong><span>Pollo crocante + papas con queso &nbsp;·&nbsp; S/ 18.90</span>
+          </figcaption>
+        </figure>
+      </div>
+    </section>
 
-<!--==================== NOSOTROS ====================-->
+    <!-- BANNER HORIZONTAL -->
+    <section class="banner-section" aria-label="Banner La Apetitosa">
+      <div class="container">
+        <figure class="banner-figure">
+          <img src="assets/banner.jpg" alt="Banner horizontal: pollo crocante, papas fritas con queso y salsas gourmet de La Apetitosa" width="1440" height="810" loading="lazy" referrerpolicy="no-referrer" />
+          <figcaption class="banner-caption">
+            <img src="assets/logo.jpg" alt="" width="120" height="80" />
+            <span><strong>La Apetitosa</strong> — Comidas Gourmet Fast Food · Recuay</span>
+          </figcaption>
+        </figure>
+      </div>
+    </section>
 
-<section class="nosotros" id="nosotros">
+    <!-- NOSOTROS -->
+    <section class="section" id="nosotros" aria-labelledby="nosotros-title">
+      <div class="container">
+        <div class="section__head">
+          <p class="eyebrow">Nuestra historia</p>
+          <h2 id="nosotros-title">Un lugar pensado para todas y todos</h2>
+          <p class="section__desc">Diseñamos cada detalle para que comer rico sea fácil, cómodo y para todos.</p>
+        </div>
+        <div class="about-grid">
+          <figure class="about-media">
+            <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=1200&auto=format&fit=crop" alt="Interior luminoso del restaurante con mesas accesibles y luz natural" loading="lazy" width="800" height="600" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='assets/banner.jpg'" />
+          </figure>
+          <div class="about-content">
+            <h3>Comidas gourmet en Recuay, con sabor de casa</h3>
+            <p>
+              Somos <strong>La Apetitosa</strong>, fast food gourmet ubicado en el
+              <strong>Instituto Superior Tecnológico Público Recuay</strong>. Pollo crocante,
+              papas con queso y salsas especiales, con opciones vegetarianas y atención inclusiva.
+              Nuestro local cuenta con rampas, mesas a altura regulable y menú en letra grande.
+            </p>
+            <ul class="check-list">
+              <li>✅ Acceso sin escalones y baños adaptados</li>
+              <li>✅ Menú con alérgenos, letra grande y lectura fácil</li>
+              <li>✅ Opciones para todas las dietas y gustos</li>
+              <li>✅ Wifi gratuito y carga para dispositivos</li>
+            </ul>
+            <a href="#galeria" class="btn btn--dark">Conocer más</a>
+          </div>
+        </div>
+      </div>
+    </section>
 
-    <h2>¿Quiénes Somos?</h2>
-
-    <p>
-
-        El Instituto de Educación Superior Tecnológico Público Recuay
-        ofrece formación profesional de calidad mediante herramientas
-        tecnológicas modernas que facilitan la gestión académica.
-
-    </p>
-
-    <img src="assets/img/instituto.jpg" alt="Instituto">
-
-</section>
-
-<!--==================== MÓDULOS ====================-->
-
-<section class="cards" id="modulos">
-
-    <h2>Nuestros Módulos</h2>
-
-    <div class="contenedor-cards">
-
-        <div class="card">
-
-            <img src="assets/img/estudiantes.jpg" alt="Estudiantes">
-
-            <h3>Matrícula</h3>
-
-            <p>Registro y administración de estudiantes.</p>
-
+    <!-- MENÚ -->
+    <section class="section section--alt" id="menu" aria-labelledby="menu-title">
+      <div class="container">
+        <div class="section__head">
+          <p class="eyebrow">Carta 2026</p>
+          <h2 id="menu-title">Menú moderno e interactivo</h2>
+          <p class="section__desc">Filtra por categoría. Pulsa con teclado, lector de pantalla o clic.</p>
         </div>
 
-        <div class="card">
-
-            <img src="assets/img/cursos.jpg" alt="Cursos">
-
-            <h3>Cursos</h3>
-
-            <p>Administración de cursos y créditos.</p>
-
+        <div class="menu-filters" role="group" aria-label="Filtrar menú por categoría">
+          <button type="button" class="filter-btn is-active" data-filter="all" aria-pressed="true">Todos</button>
+          <button type="button" class="filter-btn" data-filter="entradas" aria-pressed="false">Entradas</button>
+          <button type="button" class="filter-btn" data-filter="principales" aria-pressed="false">Principales</button>
+          <button type="button" class="filter-btn" data-filter="postres" aria-pressed="false">Postres</button>
+          <button type="button" class="filter-btn" data-filter="bebidas" aria-pressed="false">Bebidas</button>
         </div>
 
-        <div class="card">
+        <p class="menu-count" id="menu-count" aria-live="polite">Mostrando 8 platos</p>
 
-            <img src="assets/img/pagos.jpg" alt="Pagos">
+        <div class="menu-grid" id="menu-grid">
+          <!-- Entradas -->
+          <article class="dish-card" data-category="entradas">
+            <img src="assets/banner.jpg" alt="Ensalada fresca gourmet de La Apetitosa con vegetales de colores" loading="lazy" width="800" height="600" referrerpolicy="no-referrer" />
+            <div class="dish-card__body">
+              <div class="dish-card__top"><h3>Ensalada de la casa</h3><span class="price">S/ 9.50</span></div>
+              <p>Hojas verdes, palta, tomates cherry y vinagreta de miel.</p>
+              <span class="tag tag--veg">Vegetariano</span> <span class="tag">Sin gluten</span>
+            </div>
+          </article>
+          <article class="dish-card" data-category="entradas">
+            <img src="assets/banner.jpg" alt="Bruschetta gourmet de La Apetitosa con tomate y albahaca" loading="lazy" width="800" height="600" referrerpolicy="no-referrer" />
+            <div class="dish-card__body">
+              <div class="dish-card__top"><h3>Bruschetta de tomate</h3><span class="price">S/ 7.90</span></div>
+              <p>Pan de masa madre, tomate concassé, albahaca y aceite de oliva.</p>
+              <span class="tag tag--veg">Vegetariano</span>
+            </div>
+          </article>
 
-            <h3>Pagos</h3>
+          <!-- Principales -->
+          <article class="dish-card" data-category="principales">
+            <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?q=80&w=800&auto=format&fit=crop" alt="Plato principal de carne con vegetales asados" loading="lazy" width="800" height="600" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='assets/banner.jpg'" />
+            <div class="dish-card__body">
+              <div class="dish-card__top"><h3>Pollo gourmet crocante</h3><span class="price">S/ 16.90</span></div>
+              <p>Marinado 24h, papas rústicas, ensalada fresca y chimichurri.</p>
+              <span class="tag">Más pedido</span> <span class="tag">Sin gluten</span>
+            </div>
+          </article>
+          <article class="dish-card" data-category="principales">
+            <img src="https://images.unsplash.com/photo-1473093295043-cdd812d0e601?q=80&w=800&auto=format&fit=crop" alt="Pasta con salsa de tomate y albahaca" loading="lazy" width="800" height="600" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='assets/banner.jpg'" />
+            <div class="dish-card__body">
+              <div class="dish-card__top"><h3>Pasta arrabbiata</h3><span class="price">S/ 13.50</span></div>
+              <p>Tomate, ají, ajo y albahaca fresca. Opción vegana disponible.</p>
+              <span class="tag tag--veg">Vegano</span>
+            </div>
+          </article>
+          <article class="dish-card" data-category="principales">
+            <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?q=80&w=800&auto=format&fit=crop" alt="Pizza artesanal con queso y vegetales" loading="lazy" width="800" height="600" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='assets/banner.jpg'" />
+            <div class="dish-card__body">
+              <div class="dish-card__top"><h3>Pizza de la casa</h3><span class="price">S/ 14.90</span></div>
+              <p>Masa de fermentación lenta, queso mozzarella y vegetales de temporada.</p>
+              <span class="tag tag--veg">Vegetariano</span>
+            </div>
+          </article>
 
-            <p>Registro automático de pagos e IGV.</p>
+          <!-- Postres -->
+          <article class="dish-card" data-category="postres">
+            <img src="https://images.unsplash.com/photo-1551024506-0bccd828d307?q=80&w=800&auto=format&fit=crop" alt="Postre de chocolate con helado" loading="lazy" width="800" height="600" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='assets/banner.jpg'" />
+            <div class="dish-card__body">
+              <div class="dish-card__top"><h3>Volcán de chocolate</h3><span class="price">S/ 8.90</span></div>
+              <p>Centro fundido, helado de vainilla y sal marina.</p>
+              <span class="tag tag--veg">Vegetariano</span>
+            </div>
+          </article>
+          <article class="dish-card" data-category="postres">
+            <img src="https://images.unsplash.com/photo-1565958011703-44f9829ba187?q=80&w=800&auto=format&fit=crop" alt="Tarta de fresa con crema" loading="lazy" width="800" height="600" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='assets/banner.jpg'" />
+            <div class="dish-card__body">
+              <div class="dish-card__top"><h3>Tarta de fresa</h3><span class="price">S/ 7.50</span></div>
+              <p>Fresas frescas, crema ligera y base de galleta artesanal.</p>
+              <span class="tag tag--veg">Vegetariano</span> <span class="tag">Opción sin gluten</span>
+            </div>
+          </article>
 
+          <!-- Bebidas -->
+          <article class="dish-card" data-category="bebidas">
+            <img src="https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?q=80&w=800&auto=format&fit=crop" alt="Cócteles coloridos servidos en copas" loading="lazy" width="800" height="600" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='assets/banner.jpg'" />
+            <div class="dish-card__body">
+              <div class="dish-card__top"><h3>Limonada de la casa</h3><span class="price">S/ 5.90</span></div>
+              <p>Limón, menta y un toque de jengibre. También jarra para compartir.</p>
+              <span class="tag tag--veg">Natural</span>
+            </div>
+          </article>
         </div>
+      </div>
+    </section>
 
-        <div class="card">
-
-            <img src="assets/img/reportes.jpg" alt="Reportes">
-
-            <h3>Reportes</h3>
-
-            <p>Consultas e informes del sistema.</p>
-
+    <!-- GALERÍA -->
+    <section class="section" id="galeria" aria-labelledby="galeria-title">
+      <div class="container">
+        <div class="section__head">
+          <p class="eyebrow">Galería</p>
+          <h2 id="galeria-title">Momentos en La Apetitosa</h2>
         </div>
+        <div class="gallery-grid">
+          <figure><img src="https://images.unsplash.com/photo-1552566626-52f8b828add9?q=80&w=800&auto=format&fit=crop" alt="Clientes compartiendo mesa en el salón del restaurante" loading="lazy" width="800" height="600" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='assets/banner.jpg'" /><figcaption>Salón principal</figcaption></figure>
+          <figure><img src="https://images.unsplash.com/photo-1559339352-11d035aa65de?q=80&w=800&auto=format&fit=crop" alt="Chef emplatando un plato con pinzas" loading="lazy" width="800" height="600" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='assets/banner.jpg'" /><figcaption>Nuestro chef en acción</figcaption></figure>
+          <figure><img src="https://images.unsplash.com/photo-1466978913421-501180b1ec31?q=80&w=800&auto=format&fit=crop" alt="Mesa puesta con platos de colores y copas" loading="lazy" width="800" height="600" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='assets/banner.jpg'" /><figcaption>Detalle de mesa</figcaption></figure>
+          <figure><img src="https://images.unsplash.com/photo-1476224203421-9ac39bcb3327?q=80&w=800&auto=format&fit=crop" alt="Ingredientes frescos en tabla de cocina" loading="lazy" width="800" height="600" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='assets/banner.jpg'" /><figcaption>Ingredientes locales</figcaption></figure>
+        </div>
+      </div>
+    </section>
 
+    <!-- TESTIMONIOS -->
+    <section class="section section--alt" id="testimonios" aria-labelledby="testimonios-title">
+      <div class="container">
+        <div class="section__head">
+          <p class="eyebrow">Opiniones + Receta en video</p>
+          <h2 id="testimonios-title">Lo que dicen nuestros clientes</h2>
+          <p class="section__desc">Mira nuestra receta en video y lee las opiniones de quienes ya probaron La Apetitosa.</p>
+        </div>
+        <div class="testimonial-layout">
+        <div class="testimonial" role="region" aria-roledescription="carrusel" aria-label="Testimonios de clientes">
+          <div class="testimonial__track" id="testimonial-track">
+            <blockquote class="testimonial__slide is-active">
+              <p>“La comida es increíble y el local es súper accesible. Nos trataron con mucha paciencia y el menú en letra grande nos ayudó un montón.”</p>
+              <footer><strong>María Elena G.</strong> — Cliente habitual</footer>
+            </blockquote>
+            <blockquote class="testimonial__slide">
+              <p>“Reservé en 1 minuto desde el celular. Gran variedad vegetariana y el personal muy atento. Volveremos con la familia.”</p>
+              <footer><strong>Diego R.</strong> — Visitante</footer>
+            </blockquote>
+            <blockquote class="testimonial__slide">
+              <p>“El pollo gourmet es el mejor de la zona. Ambiente tranquilo, música suave y opciones sin gluten muy bien pensadas.”</p>
+              <footer><strong>Sofía T.</strong> — Crítica gastronómica</footer>
+            </blockquote>
+          </div>
+          <div class="testimonial__controls">
+            <button type="button" id="testimonial-prev" class="btn btn--ghost" aria-label="Testimonio anterior">← Anterior</button>
+            <div class="testimonial__dots" id="testimonial-dots" role="tablist" aria-label="Ir al testimonio"></div>
+            <button type="button" id="testimonial-next" class="btn btn--ghost" aria-label="Testimonio siguiente">Siguiente →</button>
+          </div>
+        </div>
+        <figure class="recipe-video">
+          <h3>Pechugas súper jugosas en salsa de limón 🍗🍋</h3>
+          <video id="testimonial-video" controls playsinline preload="metadata" poster="assets/logo.jpg"
+                 aria-describedby="video-desc">
+            <source src="assets/pechugas-limon.mp4" type="video/mp4" />
+            Tu navegador no puede reproducir este video. La receta: pechugas súper jugosas en salsa de limón, fácil y económica.
+          </video>
+          <figcaption id="video-desc">Receta fácil y económica de La Apetitosa — comidas gourmet. Pulsa reproducir para ver el video vertical.</figcaption>
+        </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- RESERVA + CONTACTO -->
+    <section class="section" id="reserva" aria-labelledby="reserva-title">
+      <div class="container">
+        <div class="section__head">
+          <p class="eyebrow">Reserva tu mesa</p>
+          <h2 id="reserva-title">Haz tu reserva en menos de 1 minuto</h2>
+          <p class="section__desc">Formulario accesible con validación en vivo. Te confirmamos por pantalla y por email.</p>
+        </div>
+        <div class="booking-grid">
+          <form class="booking-form" id="booking-form" novalidate aria-describedby="form-help">
+            <p id="form-help" class="form-help">Los campos marcados con <span aria-hidden="true">*</span> son obligatorios.</p>
+            <div class="field">
+              <label for="nombre">Nombre completo *</label>
+              <input type="text" id="nombre" name="nombre" autocomplete="name" required aria-describedby="nombre-error" />
+              <p class="field-error" id="nombre-error" role="alert"></p>
+            </div>
+            <div class="field-row">
+              <div class="field">
+                <label for="email">Correo electrónico *</label>
+                <input type="email" id="email" name="email" autocomplete="email" required aria-describedby="email-error" />
+                <p class="field-error" id="email-error" role="alert"></p>
+              </div>
+              <div class="field">
+                <label for="telefono">Teléfono</label>
+                <input type="tel" id="telefono" name="telefono" autocomplete="tel" />
+              </div>
+            </div>
+            <div class="field-row">
+              <div class="field">
+                <label for="fecha">Fecha *</label>
+                <input type="date" id="fecha" name="fecha" required aria-describedby="fecha-error" />
+                <p class="field-error" id="fecha-error" role="alert"></p>
+              </div>
+              <div class="field">
+                <label for="hora">Hora *</label>
+                <select id="hora" name="hora" required>
+                  <option value="">Elige una hora…</option>
+                  <option>12:00</option><option>13:00</option><option>14:00</option>
+                  <option>19:00</option><option>20:00</option><option>21:00</option>
+                </select>
+              </div>
+            </div>
+            <div class="field">
+              <label for="personas">Personas *</label>
+              <select id="personas" name="personas" required>
+                <option value="">Elige…</option>
+                <option value="1">1 persona</option><option value="2">2 personas</option>
+                <option value="3">3 personas</option><option value="4">4 personas</option>
+                <option value="5">5 personas</option><option value="6">6+ personas</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="notas">Notas (alergias, accesibilidad, cumpleaños…)</label>
+              <textarea id="notas" name="notas" rows="3" placeholder="Ej: Mesa tranquila, cerca de la entrada, silla para bebé…"></textarea>
+            </div>
+            <button type="submit" class="btn btn--primary btn--lg btn--block">Confirmar reserva</button>
+            <p class="booking-success" id="booking-success" role="status" aria-live="polite" hidden></p>
+          </form>
+
+          <aside class="info-card" id="contacto" aria-labelledby="contacto-title">
+            <h3 id="contacto-title">Horarios y contacto</h3>
+            <ul class="info-list">
+              <li><strong>Lun – Jue:</strong> 12:00 – 22:00</li>
+              <li><strong>Vie – Sáb:</strong> 12:00 – 23:00 + <span>Dom:</span> 12:00 – 21:00</li>
+              <li><strong>Dirección:</strong> Instituto Superior Tecnológico Público Recuay — Recuay, Áncash, Perú</li>
+              <li><strong>Referencia:</strong> Frente al instituto, Recuay</li>
+              <li><strong>Teléfono:</strong> <a href="tel:+51999999999">+51 999 999 999</a></li>
+              <li><strong>Email:</strong> <a href="mailto:hola@laapetitosa.com">hola@laapetitosa.com</a></li>
+            </ul>
+            <figure class="map-wrap">
+              <iframe title="Mapa de ubicación de La Apetitosa en el Instituto Superior Tecnológico Público Recuay, Recuay" src="https://www.openstreetmap.org/export/embed.html?bbox=-77.51%2C-9.77%2C-77.41%2C-9.67&layer=mapnik" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+              <figcaption>Instituto Superior Tecnológico Público Recuay — Recuay (mapa)</figcaption>
+            </figure>
+            <div class="social" aria-label="Redes sociales">
+              <a href="#" aria-label="Instagram de La Apetitosa">Instagram</a>
+              <a href="#" aria-label="Facebook de La Apetitosa">Facebook</a>
+              <a href="#" aria-label="TikTok de La Apetitosa">TikTok</a>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <img src="assets/logo.jpg" alt="Logo La Apetitosa Fast Food" width="140" height="93" />
+        <p><strong>LA APETITOSA</strong><br>Comidas Gourmet Fast Food · Recuay</p>
+      </div>
+      <nav aria-label="Enlaces del pie de página">
+        <ul>
+          <li><a href="#inicio">Inicio</a></li>
+          <li><a href="#menu">Menú</a></li>
+          <li><a href="#reserva">Reservas</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+      </nav>
+      <p class="footer-note">© <span id="year">2026</span> La Apetitosa · Instituto Superior Tecnológico Público Recuay.<br>Hecho con HTML, CSS y JavaScript · Accesible WCAG 2.2 AA.<br>Desarrollado por <strong>PALACIOS ROSALES JIMMY</strong></p>
     </div>
+  </footer>
 
-</section>
+  <button type="button" class="back-to-top" id="back-to-top" aria-label="Volver al inicio" hidden>↑</button>
+  <div class="sr-only" aria-live="polite" id="announcer"></div>
 
-<!--==================== CONTACTO ====================-->
-
-<section class="contacto" id="contacto">
-
-    <h2>Información de Contacto</h2>
-
-    <p>
-
-        <i class="fa-solid fa-location-dot"></i>
-
-        Recuay - Áncash - Perú
-
-    </p>
-
-    <p>
-
-        <i class="fa-solid fa-phone"></i>
-
-        (043) 123-456
-
-    </p>
-
-    <p>
-
-        <i class="fa-solid fa-envelope"></i>
-
-        info@iestprecuay.edu.pe
-
-    </p>
-
-</section>
-
-<!--==================== FOOTER ====================-->
-
-<footer>
-
-    <p>
-
-        © 2026 Sistema Web de Matrícula |
-        IESTP Recuay - Todos los derechos reservados.
-        
-    </p>
-    <p>palacios rosales jimmy </p>
-
-</footer>
-
-<script src="js/app.js"></script>
-
+  <script src="js/app.js"></script>
 </body>
-
 </html>
