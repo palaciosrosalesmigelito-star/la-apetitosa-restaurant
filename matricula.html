@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Matrícula | Sistema Web de Matrícula</title>
+
+    <link rel="stylesheet" href="css/matricula.css">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+        <link rel="icon" type="image/png" href="../assets/img/favicon.png">
+
+
+</head>
+
+<body>
+
+<header class="header">
+
+    <div class="logo">
+        <img src="assets/img/logo.png" alt="Logo">
+        <h2>IESTP Recuay</h2>
+    </div>
+
+    <!-- Botón menú hamburguesa -->
+    <button class="menu-toggle" id="menuToggle">
+        <i class="fa-solid fa-bars"></i>
+    </button>
+
+    <nav class="menu" id="menu">
+
+        <ul>
+
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="matricula.html" class="activo">Matrícula</a></li>
+            <li><a href="cursos.html">Cursos</a></li>
+            <li><a href="pagos.html">Pagos</a></li>
+            <li><a href="reportes.html">Reportes</a></li>
+            <li><a href="login.html">Cerrar Sesión</a></li>
+
+        </ul>
+
+    </nav>
+
+</header>
+
+<main class="contenedor">
+
+    <h1>Registro de Estudiantes</h1>
+
+    <form id="frmMatricula">
+
+        <div class="grupo">
+
+            <label>DNI</label>
+
+            <input
+                type="text"
+                id="dni"
+                maxlength="8"
+                placeholder="Ingrese DNI"
+                required>
+
+        </div>
+
+        <div class="grupo">
+
+            <label>Nombres</label>
+
+            <input
+                type="text"
+                id="nombres"
+                placeholder="Ingrese nombres"
+                required>
+
+        </div>
+
+        <div class="grupo">
+
+            <label>Apellidos</label>
+
+            <input
+                type="text"
+                id="apellidos"
+                placeholder="Ingrese apellidos"
+                required>
+
+        </div>
+
+        <div class="grupo">
+
+            <label>Programa de Estudios</label>
+
+            <select id="programa" required>
+
+                <option value="">Seleccione</option>
+                <option>Desarrollo de Sistemas</option>
+                <option>Contabilidad</option>
+                <option>Enfermería</option>
+                <option>Administración</option>
+                <option>Electrónica</option>
+
+            </select>
+
+        </div>
+
+        <div class="grupo">
+
+            <label>Ciclo</label>
+
+            <select id="ciclo" required>
+
+                <option value="">Seleccione</option>
+                <option>I</option>
+                <option>II</option>
+                <option>III</option>
+                <option>IV</option>
+                <option>V</option>
+                <option>VI</option>
+
+            </select>
+
+        </div>
+
+        <div class="grupo">
+
+            <label>Correo</label>
+
+            <input
+                type="email"
+                id="correo"
+                placeholder="correo@correo.com"
+                required>
+
+        </div>
+
+        <div class="grupo">
+
+            <label>Celular</label>
+
+            <input
+                type="text"
+                id="celular"
+                maxlength="9"
+                placeholder="987654321"
+                required>
+
+        </div>
+
+        <div class="botones">
+
+            <button type="submit">
+                <i class="fa-solid fa-floppy-disk"></i>
+                Registrar
+            </button>
+
+            <button type="reset">
+                <i class="fa-solid fa-eraser"></i>
+                Limpiar
+            </button>
+
+        </div>
+
+    </form>
+
+    <h2>Lista de Estudiantes</h2>
+
+    <table>
+
+        <thead>
+
+            <tr>
+
+                <th>Código</th>
+                <th>DNI</th>
+                <th>Nombres</th>
+                <th>Apellidos</th>
+                <th>Programa</th>
+                <th>Ciclo</th>
+                <th>Correo</th>
+                <th>Celular</th>
+                <th>Acciones</th>
+
+            </tr>
+
+        </thead>
+
+        <tbody id="tablaEstudiantes">
+
+            <tr>
+
+                <td colspan="9">
+                    No existen estudiantes registrados.
+                </td>
+
+            </tr>
+
+        </tbody>
+
+    </table>
+
+</main>
+
+<footer>
+
+    <p>© 2026 Sistema Web de Matrícula - IESTP Recuay</p>
+    <p>palacios rosales jimmy </p>
+
+</footer>
+
+<script src="js/app.js"></script>
+<script src="js/matricula.js"></script>
+
+</body>
+
+</html>

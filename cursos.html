@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Cursos | Sistema Web de Matrícula</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/cursos.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="icon" type="image/png" href="../assets/img/favicon.png">
+
+
+</head>
+
+<body>
+
+    <!-- HEADER -->
+
+    <header class="header">
+
+        <div class="logo">
+
+            <img src="assets/img/logo.png" alt="Logo">
+
+            <h2>IESTP Recuay</h2>
+
+        </div>
+
+        <!-- Botón menú hamburguesa -->
+        <button class="menu-toggle" id="menuToggle">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+
+        <nav class="menu" id="menu">
+
+            <ul>
+
+                <li><a href="dashboard.html">Dashboard</a></li>
+
+                <li><a href="matricula.html">Matrícula</a></li>
+
+                <li><a href="cursos.html" class="activo">Cursos</a></li>
+
+                <li><a href="pagos.html">Pagos</a></li>
+
+                <li><a href="reportes.html">Reportes</a></li>
+
+                <li><a href="login.html">Cerrar Sesión</a></li>
+
+            </ul>
+
+        </nav>
+
+    </header>
+
+    <!-- CONTENIDO -->
+
+    <main class="contenedor">
+
+        <h1>Registro de Cursos</h1>
+
+        <!-- FORMULARIO -->
+
+        <form id="frmCursos">
+
+            <div class="grupo">
+
+                <label>Código</label>
+
+                <input
+                    type="text"
+                    id="codigo"
+                    placeholder="Ejemplo: DW101"
+                    required>
+
+            </div>
+
+            <div class="grupo">
+
+                <label>Nombre del Curso</label>
+
+                <select id="nombre" required>
+
+                    <option value="">Seleccione un curso</option>
+
+                    <option>Desarrollo Web</option>
+                    <option>Base de Datos</option>
+                    <option>Redes</option>
+                    <option>Arquitectura TI</option>
+                    <option>Programación</option>
+                    <option>Ofimática</option>
+
+                </select>
+
+            </div>
+
+            <div class="grupo">
+
+                <label>Créditos</label>
+
+                <input
+                    type="number"
+                    id="creditos"
+                    min="1"
+                    max="10"
+                    required>
+
+            </div>
+
+            <div class="grupo">
+
+                <label>Costo por Crédito</label>
+
+                <input
+                    type="number"
+                    id="costo"
+                    min="0"
+                    step="0.01"
+                    placeholder="0.00"
+                    required>
+
+            </div>
+
+            <div class="botones">
+
+                <button type="submit">
+
+                    <i class="fa-solid fa-floppy-disk"></i>
+
+                    Registrar
+
+                </button>
+
+                <button type="reset">
+
+                    <i class="fa-solid fa-eraser"></i>
+
+                    Limpiar
+
+                </button>
+
+            </div>
+
+        </form>
+
+        <!-- TABLA -->
+
+        <h2>Lista de Cursos</h2>
+
+        <table>
+
+            <thead>
+
+                <tr>
+
+                    <th>Código</th>
+                    <th>Curso</th>
+                    <th>Créditos</th>
+                    <th>Costo</th>
+                    <th>Acciones</th>
+
+                </tr>
+
+            </thead>
+
+            <tbody id="tablaCursos">
+
+                <tr>
+
+                    <td colspan="5">
+
+                        No existen cursos registrados.
+
+                    </td>
+
+                </tr>
+
+            </tbody>
+
+        </table>
+
+    </main>
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <p>
+
+            © 2026 Sistema Web de Matrícula - IESTP Recuay
+
+        </p>
+        <p>palacios rosales jimmy </p>
+
+    </footer>
+
+    <!-- JAVASCRIPT -->
+
+    <script src="js/app.js"></script>
+    <script src="js/cursos.js"></script>
+
+</body>
+
+</html>

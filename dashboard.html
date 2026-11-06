@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Dashboard | Sistema Web de Matrícula</title>
+
+    <link rel="stylesheet" href="css/dashboard.css">
+
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="icon" type="image/png" href="../assets/img/favicon.png">
+
+
+</head>
+
+<body>
+
+<!--==========================
+HEADER
+===========================-->
+
+<header class="header">
+
+    <div class="logo">
+
+        <img src="assets/img/logo.png" alt="Logo">
+
+        <h2>IESTP Recuay</h2>
+
+    </div>
+
+    <!-- Botón menú responsive -->
+
+    <button class="menu-toggle" id="menuToggle">
+
+        <i class="fa-solid fa-bars"></i>
+
+    </button>
+
+    <!-- Menú -->
+
+    <nav class="menu" id="menu">
+
+        <ul>
+
+            <li>
+                <a href="dashboard.html" class="activo">
+                    Dashboard
+                </a>
+            </li>
+
+            <li>
+                <a href="matricula.html">
+                    Matrícula
+                </a>
+            </li>
+
+            <li>
+                <a href="cursos.html">
+                    Cursos
+                </a>
+            </li>
+
+            <li>
+                <a href="pagos.html">
+                    Pagos
+                </a>
+            </li>
+
+            <li>
+                <a href="reportes.html">
+                    Reportes
+                </a>
+            </li>
+
+            <li>
+                <a href="login.html">
+                    Cerrar sesión
+                </a>
+            </li>
+
+        </ul>
+
+    </nav>
+
+</header>
+
+<!--==========================
+CONTENIDO
+===========================-->
+
+<main class="contenedor">
+
+    <h1>Panel de Control</h1>
+
+    <p class="bienvenida">
+
+        Bienvenido al Sistema Web de Matrícula del
+        Instituto de Educación Superior Tecnológico Público Recuay.
+
+    </p>
+
+    <!-- TARJETAS -->
+
+    <section class="cards">
+
+        <div class="card">
+
+            <i class="fa-solid fa-user-graduate"></i>
+
+            <h3 id="totalEstudiantes">0</h3>
+
+            <p>Estudiantes</p>
+
+        </div>
+
+        <div class="card">
+
+            <i class="fa-solid fa-book-open"></i>
+
+            <h3 id="totalCursos">0</h3>
+
+            <p>Cursos</p>
+
+        </div>
+
+        <div class="card">
+
+            <i class="fa-solid fa-file-signature"></i>
+
+            <h3 id="totalMatriculas">0</h3>
+
+            <p>Matrículas</p>
+
+        </div>
+
+        <div class="card">
+
+            <i class="fa-solid fa-money-bill-wave"></i>
+
+            <h3 id="montoRecaudado">S/ 0.00</h3>
+
+            <p>Recaudación</p>
+
+        </div>
+
+    </section>
+
+    <!-- ACCESOS RÁPIDOS -->
+
+    <section class="accesos">
+
+        <h2>Accesos Rápidos</h2>
+
+        <div class="botones">
+
+            <a href="matricula.html" class="btn">
+                <i class="fa-solid fa-user-plus"></i>
+                Matrícula
+            </a>
+
+            <a href="cursos.html" class="btn">
+                <i class="fa-solid fa-book"></i>
+                Cursos
+            </a>
+
+            <a href="pagos.html" class="btn">
+                <i class="fa-solid fa-credit-card"></i>
+                Pagos
+            </a>
+
+            <a href="reportes.html" class="btn">
+                <i class="fa-solid fa-chart-column"></i>
+                Reportes
+            </a>
+
+        </div>
+
+    </section>
+
+    <!-- TABLA -->
+
+    <section class="tabla">
+
+        <h2>Últimos Estudiantes Registrados</h2>
+
+        <table>
+
+            <thead>
+
+                <tr>
+
+                    <th>Código</th>
+                    <th>DNI</th>
+                    <th>Nombre</th>
+                    <th>Programa</th>
+                    <th>Ciclo</th>
+
+                </tr>
+
+            </thead>
+
+            <tbody id="tablaEstudiantes">
+
+                <tr>
+
+                    <td colspan="5">
+
+                        No existen estudiantes registrados.
+
+                    </td>
+
+                </tr>
+
+            </tbody>
+
+        </table>
+
+    </section>
+
+</main>
+
+<!--==========================
+FOOTER
+===========================-->
+
+<footer>
+
+    <p>
+
+        © 2026 Sistema Web de Matrícula |
+        IESTP Recuay - Todos los derechos reservados.
+
+    </p>
+    <p>palacios rosales jimmy </p>
+
+</footer>
+
+<script src="js/app.js"></script>
+
+<script src="js/dashboard.js"></script>
+
+</body>
+
+</html>
